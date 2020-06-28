@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:text="这是日期"
+        android:id="@+id/dateByHour"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_height="50dp"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/forecast_weatherByHour"
+        android:text="这是天气"
+        android:layout_width="0dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_height="50dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tempByHour"
+        android:text="这是温度"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:layout_width="0dp"
+        android:textColor="@android:color/white"
+        android:layout_height="50dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
