@@ -70,8 +70,6 @@ public class ShowCityActivity extends AppCompatActivity implements AdapterView.O
     @Override
     public void onItemClick(AdapterView<?> parent, View view, final int position, final long id) {
         final List<ShowCity> allCityList = DataSupport.findAll(ShowCity.class);
-        final List<ShowCity> allCityList2 = DataSupport.findAll(ShowCity.class);
-        Toast.makeText(ShowCityActivity.this, "position是"+position+"id是"+id, Toast.LENGTH_SHORT).show();
         for (int i=0 ;i<allCityList.size();i++){
             Log.d("S",allCityList.get(i).getCity());
         }
@@ -86,22 +84,7 @@ public class ShowCityActivity extends AppCompatActivity implements AdapterView.O
                     .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             //将点击的城市设置为默认城市
-                            String temp="万源市";
-
-                            ShowCity showCity=new ShowCity();
-                            showCity.setCity("达州市");
-                            showCity.update(id);
- 
-                            showCity.setCity(temp);
-                            showCity.update(0);
-
-                            List<ShowCity> allCityList2 = DataSupport.findAll(ShowCity.class);
-                            showCityAdapter = new ShowCityAdapter(ShowCityActivity.this, R.layout.showcity_item, allCityList2);
-                            listView.setAdapter(showCityAdapter);
-
-                            for (int i=0 ;i<allCityList2.size();i++){
-                                Log.d("S",allCityList2.get(i).getCity());
-                            }
+                            Toast.makeText(ShowCityActivity.this, "删除其他城市即可,目前直接设置默认城市还有bug", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -137,7 +120,7 @@ public class ShowCityActivity extends AppCompatActivity implements AdapterView.O
                     public void onClick(DialogInterface dialog, int whichButton) {
                     }
                 }).create().show();
-        return false;
+        return true;
     }
 
     protected void onResume(){
