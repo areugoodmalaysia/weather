@@ -10,5 +10,5 @@
 4.支持多城市添加储存,并且使用listview+litepal显示.按理说该实现设置默认城市功能,但是写了很久的item点击的城市与第一个城市交换位置(因为默认城市总是在第一位),没写出来.其实....把其它城市删了,剩下的就是默认的城市了哈哈
 
 5.效果图可在image目录或实训报告中看到.
-![Alt text](https://raw.githubusercontent.com/areugoodmalaysia/weather/master/images/addCity.jpg)
+![image](https://raw.githubusercontent.com/areugoodmalaysia/weather/master/images/addCity.jpg)
 
